@@ -32,5 +32,10 @@ for i in factors:
                 r = k
                 break
             k += 1
+
+nr = int(len(factors)-1)
     
-    print(r)
+print("""
+Non-repeating: {0}
+Repeating: {1}
+""".format(nr, r))

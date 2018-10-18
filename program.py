@@ -26,8 +26,8 @@ for k in non_repeating:
 
 for i in factors:
     if i != 2 and i != 5:
+        k = 1
         while True:
-            k=1
             if (10**k-1)%i == 0:
                 r = k
                 break

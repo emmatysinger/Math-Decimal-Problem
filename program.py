@@ -1,5 +1,5 @@
 from math import *
-for d in range(2,15)
+for d in range(2,15):
     # n = int(input("Numerator? "))
     # d = int(input("Denominator? "))
     
@@ -9,7 +9,7 @@ for d in range(2,15)
              common_factor = i
              break
     
-    n = n/common_factor
+    #n = n/common_factor
     d = d/common_factor
     non_repeating = [10, 5, 2]
     # w = { 2:[1,0], 3:[0,1], 5:[1,0], 7:[0,6], 9:[0,1], 11:[0,2]}

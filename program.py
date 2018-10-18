@@ -3,13 +3,14 @@ for d in range(2,15):
     # n = int(input("Numerator? "))
     # d = int(input("Denominator? "))
     
+    n=1
     common_factor = 1
     for i in range(min(abs(n), abs(d)), 1, -1):
          if n%i == 0 and d%i == 0:
              common_factor = i
              break
     
-    #n = n/common_factor
+    n = n/common_factor
     d = d/common_factor
     non_repeating = [10, 5, 2]
     # w = { 2:[1,0], 3:[0,1], 5:[1,0], 7:[0,6], 9:[0,1], 11:[0,2]}
@@ -27,8 +28,8 @@ for d in range(2,15):
     for i in factors:
         if i != 2 and i != 5:
             while True:
-                k=0
-                if (10^k-1)%1 == 0:
+                k=1
+                if (10^k-1)%i == 0:
                     r = k
                     break
                 k += 1

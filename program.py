@@ -12,8 +12,6 @@ for i in range(min(abs(n), abs(d)), 1, -1):
 n = n/common_factor
 d = d/common_factor
 non_repeating = [10, 5, 2]
-# w = { 2:[1,0], 3:[0,1], 5:[1,0], 7:[0,6], 9:[0,1], 11:[0,2]}
-print("Simplified fraction is {0}/{1}".format(int(n), int(d)))
 factors = []
 
 for k in non_repeating:
@@ -24,7 +22,8 @@ for k in non_repeating:
         last_factor = d
         factors.append(int(d))
 
-if last_factor != 0:
+
+if last_factor != 1:
     numerator = 1
     r = 0
     while last_factor > numerator:
@@ -39,6 +38,8 @@ if last_factor != 0:
         digit = new_n//last_factor
         new_n = new_n - digit*last_factor
         r += 1
+else:
+    r = 0
 
 
 nr = int(len(factors)-1)
@@ -46,4 +47,4 @@ nr = int(len(factors)-1)
 print("""
 Non-repeating: {0}
 Repeating: {1}
-""".format(nr, r))
+""".format(nr, 0))

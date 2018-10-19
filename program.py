@@ -21,17 +21,33 @@ for k in non_repeating:
         factors.append(k)
         d /= k
     if k == 2:
+        last_factor = d
         factors.append(int(d))
 
+if last_factor != 0:
+    numerator = 1
+    while last_factor > numerator:
+        numerator *= 10
+    digit = numerator//last_factor
+    new_n = numerator - digit*last_factor
+    r = 1
 
-for i in factors:
-    if i != 2 and i != 5:
-        k = 1
-        while True:
-            if (10**k-1)%i == 0:
-                r = k
-                break
-            k += 1
+    while new_n != 1:
+        while last_factor > new_n:
+            new_n *= 10
+        digit = new_n//last_factor
+        new_n = numerator - digit*last_factor
+        r += 1
+
+
+# for i in factors:
+#     if i != 2 and i != 5:
+#         k = 1
+#         while True:
+#             if (10**k-1)%i == 0:
+#                 r = k
+#                 break
+#             k += 1
 
 nr = int(len(factors)-1)
     

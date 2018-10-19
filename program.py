@@ -26,11 +26,12 @@ for k in non_repeating:
 
 if last_factor != 0:
     numerator = 1
+    r = 0
     while last_factor > numerator:
         numerator *= 10
+        r += 1
     digit = numerator//last_factor
     new_n = numerator - digit*last_factor
-    r = 1
 
     while new_n != 1:
         while last_factor > new_n:

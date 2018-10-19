@@ -31,7 +31,6 @@ if last_factor != 0:
     digit = numerator//last_factor
     new_n = numerator - digit*last_factor
     r = 1
-    print(new_n)
 
     while new_n != 1:
         while last_factor > new_n:
@@ -39,7 +38,6 @@ if last_factor != 0:
         digit = new_n//last_factor
         new_n = new_n - digit*last_factor
         r += 1
-
 
 
 nr = int(len(factors)-1)

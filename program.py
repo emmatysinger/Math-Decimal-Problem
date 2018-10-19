@@ -31,23 +31,16 @@ if last_factor != 0:
     digit = numerator//last_factor
     new_n = numerator - digit*last_factor
     r = 1
+    print(new_n)
 
     while new_n != 1:
         while last_factor > new_n:
             new_n *= 10
         digit = new_n//last_factor
-        new_n = numerator - digit*last_factor
+        new_n = new_n - digit*last_factor
         r += 1
 
 
-# for i in factors:
-#     if i != 2 and i != 5:
-#         k = 1
-#         while True:
-#             if (10**k-1)%i == 0:
-#                 r = k
-#                 break
-#             k += 1
 
 nr = int(len(factors)-1)
     
